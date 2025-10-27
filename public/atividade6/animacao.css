@@ -1,0 +1,16 @@
+body {
+  background-color: #87CEFA; /* azul claro */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-image: url(Quagmire-in-Family-Guy-5.avif);
+}
+
+canvas {
+
+  background-color: transparent;
+}
