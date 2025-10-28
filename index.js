@@ -31,7 +31,7 @@ app.post('/cadastra', (req, res) => {
 
 // Rota GET para login
 app.get('/login', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'LAB8', 'Login.html'));
+  res.sendFile(path.join(__dirname, 'public', 'atividade8', 'login.html'));
 });
 
 // Rota POST para processar login
@@ -48,7 +48,7 @@ app.post('/login', (req, res) => {
 
 // Página inicial
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'LAB8', 'Login.html'));
+  res.sendFile(path.join(__dirname, 'public', 'atividade8', 'login.html'));
 });
 
 const PORT = 80;
