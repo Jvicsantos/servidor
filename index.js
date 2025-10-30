@@ -19,7 +19,7 @@ const usuarios = [];
 
 // Rota GET para cadastro
 app.get('/cadastra', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'LAB8', 'Cadastro.html'));
+  res.sendFile(path.join(__dirname, 'public', 'atividade8', 'Cadastro.html'));
 });
 
 // Rota POST para cadastro

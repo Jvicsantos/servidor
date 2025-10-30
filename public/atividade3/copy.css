@@ -1,16 +1,10 @@
+/* Estilos iniciais */
 body {
-    /* Estilos iniciais */
     margin: 0;
     font-family: "Sans-Serif", Arial, sans-serif;
-    background-color: lightgray; /* fundo geral */
-    color: black; /* cor do texto padrão */
+    background-color: lightgray;
+    color: black;
     text-align: center;
-
-    /* Novos estilos para o body (se desejar substituir o anterior): */
-    /* font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
-    color: #222;
-    padding: 0; */
 }
 
 /* Cabeçalho */
@@ -22,12 +16,13 @@ header {
     justify-content: space-between;
     align-items: center;
 }
-/* imagem do cabeçalho */
+
 header img {
     width: 70px;
     height: 70px;
-    margin:0 20;
+    margin: 0 20px;
 }
+
 header h1 {
     color: darkgreen;
     font-weight: bold;
@@ -42,6 +37,7 @@ nav {
     border-top: 2px solid darkgreen;
     border-bottom: 2px solid darkgreen;
 }
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -50,6 +46,7 @@ nav ul {
     justify-content: center;
     gap: 60px;
 }
+
 nav li {
     font-weight: bold;
     font-size: 12pt;
@@ -58,7 +55,7 @@ nav li {
     user-select: none;
 }
 
-/* Conteúdo principal (main) */
+/* Conteúdo principal */
 main {
     max-width: 900px;
     margin: 20px auto;
@@ -67,11 +64,10 @@ main {
     border-radius: 5px;
 }
 
-/* Estilos de títulos (h1 não existe no main, mas h2 e h3 sim) */
+/* Títulos */
 h2, h3 {
     font-weight: bold;
     color: indigo;
-    /* h1, h2: text-align: center; (se usar o segundo bloco CSS) */
 }
 
 p {
@@ -88,6 +84,7 @@ p {
     gap: 40px;
     margin-bottom: 30px;
 }
+
 .livros img {
     width: 160px;
     height: auto;
@@ -97,14 +94,15 @@ p {
 /* Aprenda na FEI */
 .aprenda {
     display: flex;
-    justify-content: center;
-    gap: 40px;
+    flex-direction: column; /* organiza elementos verticalmente */
+    align-items: center;    /* centraliza horizontalmente */
+    gap: 20px;              /* espaço entre título e iframes */
     margin-bottom: 30px;
 }
-.aprenda iframe, .aprenda img {
-    /* iframe para o vídeo, o outro iframe é um mapa */
-    width: 320px;
-    height: 240px;
+
+.aprenda iframe {
+    width: 560px;  /* tamanho do vídeo */
+    height: 315px;
     border: 1px solid indigo;
 }
 
@@ -117,10 +115,12 @@ table {
     color: darkred;
     width: 320px;
 }
+
 table th, table td {
     border: 1px dotted red;
     padding: 5px;
 }
+
 table th {
     font-weight: bold;
 }
@@ -135,12 +135,13 @@ table th {
     font-size: 14px;
     color: black;
 }
-/* Estilos para todos os links, incluindo dentro de .sites-consulta (sobrescrevem o `a { }` global) */
+
 .sites-consulta a {
     font-weight: bold;
     color: darkred;
     text-decoration: none;
 }
+
 .sites-consulta a:hover {
     text-decoration: underline;
 }
@@ -160,29 +161,84 @@ footer {
     font-size: 15pt;
     color: black;
 }
+
 footer .left-logo, footer .right-logo {
     width: 60px;
     height: 60px;
 }
+
 footer .text {
     text-align: center;
     flex-grow: 1;
 }
 
-/* Rodapé com link de volta (Contêiner do link) */
+/* Rodapé com link de volta */
 .voltar {
     text-align: center;
-    padding: 15px;
+    padding: 15px;/* === ESTILO DO BODY === */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+/* === BOTÃO "Ver meus projetos" === */
+.voltar {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    background-color: #4caf50; /* verde do tema */
+    border-top: 3px solid #388e3c;
+}
+
+.link-projetos {
+    display: inline-block;
+    background-color: white;
+    color: #4caf50;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid #4caf50;
+    transition: all 0.3s ease;
+}
+
+.link-projetos:hover {
+    background-color: #388e3c;
+    color: white;
+    border-color: #388e3c;
+    transform: scale(1.05);
+}
+
+/* === CONTAINER DOS IFRAMES === */
+.iframe-container {
+    display: flex;
+    justify-content: center; /* centraliza horizontalmente */
+    gap: 20px; /* espaço entre os iframes */
+    flex-wrap: wrap; /* quebra linha em telas pequenas */
+    margin-top: 20px;
+}
+
+/* === ESTILO DOS IFRAMES === */
+.iframe-container iframe {
+    max-width: 100%; /* ajusta ao tamanho do container */
+    height: auto; /* mantém proporção */
+    border: 0; /* remove borda padrão */
+    flex: 1 1 300px; /* flexível, mínimo 300px */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* leve sombra */
+    border-radius: 8px;
+}
+
     margin-top: 20px;
     background-color: #4caf50;
     color: white;
     border-top: 3px solid #388e3c;
 }
-
-/* Estilos para o link final (O seu bloco de CSS) */
-/* OBS: O seu CSS inclui um `a { }` global, mas estou mantendo o `a` original. 
-   Se quiser o `a { color: #4caf50; text-decoration: none; }` global, 
-   então substitua os estilos dos links no bloco .sites-consulta e remova o .link-voltar */
 
 .link-projetos {
     display: inline-block;
@@ -200,6 +256,3 @@ footer .text {
     background-color: #388e3c;
     color: white;
 }
-
-/* O código original da classe .link-voltar foi substituído/renomeado por .link-projetos. */
-/* Removido o .link-voltar e .link-voltar:hover para usar o .link-projetos e .link-projetos:hover. */
